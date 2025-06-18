@@ -87,11 +87,11 @@ Remplacer la carte Arduino par le **microcontrôleur brut** (ATmega328P), afin d
 ####  Fonctionnement :
 - L’ATmega328P est programmé avec le même code que celui utilisé sur une carte Arduino, à l’aide d’un programmateur externe (comme USBasp ou Arduino as ISP).  
 - Les deux ATmega328P communiquent via le protocole I2C :
-    - L’un joue le rôle de maître (ex. : collecte les données du MPU6050).  
-    - L’autre joue le rôle d’esclave (ex. : affiche les données sur un écran LCD I2C).  
+    - L’un joue le rôle de maître (elle collecte les données du MPU6050).  
+    - L’autre joue le rôle d’esclave (elle affiche les données sur un écran LCD I2C).  
 - Les microcontrôleurs sont utilisés en mode "standalone" (hors carte de développement) :
 - Connectés sur breadboard avec :
-    - Un quartz et deux condensateurs 22 pF chacun pour générer l’horloge.
+    - Un quartz et deux condensateurs 22 pF pour chaque ATMEGA328P pour générer l’horloge.
     - Une alimentation 5V stable.
     - Un bouton poussoir relié à la broche RESET de chaque ATmega.
     - Une résistance de 10 kΩ connectée entre la broche RESET et VCC, pour garantir un redémarrage stable.
