@@ -1,4 +1,4 @@
-# communication-I2C  
+# Etapes_de_validation_avant_PCB  
 
 ## Objectif Général
 Avant de réaliser directement le PCB de la boîte noire et de la station de contrôle, nous avons choisi de suivre une démarche progressive. L’objectif était de bien maîtriser la communication I2C et le fonctionnement du microcontrôleur ATmega328P.  
