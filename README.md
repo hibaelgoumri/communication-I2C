@@ -64,7 +64,7 @@ Simuler une application plus réaliste en utilisant des **capteurs réels(MPU605
 ![WhatsApp Image 2025-06-18 at 11 45 24](https://github.com/user-attachments/assets/4bf55be3-fb1c-43e9-98be-2359a4609619)  
 
 #### Le resultat
-la video 
+[la video ](https://github.com/user-attachments/assets/ff466a56-6247-4dd7-9b3b-220b9bc93346)
 
 ---
 
