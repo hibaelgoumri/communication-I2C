@@ -1,14 +1,13 @@
 # communication-I2C  
 
 ## Objectif Général
-
 Avant de réaliser directement le PCB de la boîte noire et de la station de contrôle, nous avons choisi de suivre une démarche progressive. L’objectif était de bien maîtriser la communication I2C et le fonctionnement du microcontrôleur ATmega328P.  
 Tester les fonctionnalités sur breadboard avec des composants simples (comme un bouton, une LED, un MPU6050 ou un LCD) permet plus de flexibilité et facilite le débogage. Contrairement au PCB, où les composants sont soudés, la breadboard permet des modifications rapides.  
 Cette approche nous a permis de valider chaque étape avant l'intégration finale sur le PCB, en réduisant les risques d’erreurs matérielles ou logicielles.
 
 ---
 
-## Étapes de Réalisation
+## Étapes de Réalisation 
 
 ###  Étape 1 : Communication I2C entre deux Arduino (Test de base)
 
@@ -30,10 +29,13 @@ Valider le **fonctionnement de la communication I2C** entre deux microcontrôleu
 - Apprendre à configurer le bus I2C (maître/esclave).
 - Vérifier la synchronisation et la fiabilité de la communication.
 - Observer une réponse simple à un signal I2C.
+  
 #### le montage 
 (![WhatsApp Image 2025-06-18 at 11 28 38 (1) (2)](https://github.com/user-attachments/assets/88f6527a-9f2b-40c0-a4ea-c1e3489a3cf6) 
+
 #### le resultat
 inserer la video ici
+
 ---
 
 ###  Étape 2 : Remplacement par des modules réels (MPU6050 et LCD)
@@ -57,10 +59,13 @@ Simuler une application plus réaliste en utilisant des **capteurs réels(MPU605
 - Manipuler un **capteur complexe** avec acquisition de données.
 - Gérer l'affichage distant d'informations, toujours via I2C.
 - Approfondir le protocole I2C dans un cas concret (multi-esclaves potentiels, synchronisation).
+- 
 #### Le montage
-![WhatsApp Image 2025-06-18 at 11 45 24](https://github.com/user-attachments/assets/4bf55be3-fb1c-43e9-98be-2359a4609619)
+![WhatsApp Image 2025-06-18 at 11 45 24](https://github.com/user-attachments/assets/4bf55be3-fb1c-43e9-98be-2359a4609619)  
+
 #### Le resultat
-la video
+la video 
+
 ---
 
 ###  Étape 3 : Intégration avec ATmega328P (préparation au PCB)
@@ -96,10 +101,15 @@ Remplacer la carte Arduino par le **microcontrôleur brut** (ATmega328P), afin d
 - Tester la communication I2C dans les **conditions matérielles réelles** du futur PCB.
 - Préparer l’intégration finale des composants sur un **PCB personnalisé**.
 
+####  Le montage
+l'image de montage
+
+####  Le resultat
+la video
+
 ---
 
 ##  Pourquoi cette Démarche ?
-
 La réalisation d’un PCB nécessite des choix précis de composants et un bon fonctionnement garanti **en amont**. Cette démarche par étapes nous a permis de :
 
 - Identifier les erreurs éventuelles (bruit sur la ligne I2C, mauvais câblage, alimentation instable…).
@@ -109,9 +119,7 @@ La réalisation d’un PCB nécessite des choix précis de composants et un bon 
 
 ---
 
-##  Résultat Attendu
 
-À la fin de ces trois étapes, tous les modules sont fonctionnels et la communication I2C est stable. Le passage au PCB peut donc se faire en toute confiance, avec un **design compact** et optimisé autour de l’ATmega328P.
 
 
 ---
