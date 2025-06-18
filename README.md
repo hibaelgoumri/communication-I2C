@@ -32,13 +32,14 @@ Valider le **fonctionnement de la communication I2C** entre deux microcontrôleu
 - Observer une réponse simple à un signal I2C.
 #### le montage 
 (![WhatsApp Image 2025-06-18 at 11 28 38 (1) (2)](https://github.com/user-attachments/assets/88f6527a-9f2b-40c0-a4ea-c1e3489a3cf6) 
-
+#### le resultat
+inserer la video ici
 ---
 
 ###  Étape 2 : Remplacement par des modules réels (MPU6050 et LCD)
 
 ####  Objectif :
-Simuler une application plus réaliste en utilisant des **capteurs réels** et un **afficheur**, tout en gardant la communication I2C entre deux cartes.
+Simuler une application plus réaliste en utilisant des **capteurs réels(MPU6050)** et un **afficheur(lCD)**, tout en gardant la communication I2C entre deux cartes.
 
 ####  Composants utilisés :
 - MPU6050 (capteur accéléromètre/gyroscope) sur le **maître**
@@ -56,7 +57,10 @@ Simuler une application plus réaliste en utilisant des **capteurs réels** et u
 - Manipuler un **capteur complexe** avec acquisition de données.
 - Gérer l'affichage distant d'informations, toujours via I2C.
 - Approfondir le protocole I2C dans un cas concret (multi-esclaves potentiels, synchronisation).
-
+#### Le montage
+![WhatsApp Image 2025-06-18 at 11 45 24](https://github.com/user-attachments/assets/4bf55be3-fb1c-43e9-98be-2359a4609619)
+#### Le resultat
+la video
 ---
 
 ###  Étape 3 : Intégration avec ATmega328P (préparation au PCB)
@@ -65,16 +69,27 @@ Simuler une application plus réaliste en utilisant des **capteurs réels** et u
 Remplacer la carte Arduino par le **microcontrôleur brut** (ATmega328P), afin de simuler les conditions réelles d’un circuit imprimé.
 
 ####  Composants utilisés :
-- Microcontrôleur **ATmega328P** (standalone)
-- Oscillateur 16 MHz (ou interne)
-- Résistances de pull-up pour I2C
-- Programmateur (USBasp, Arduino as ISP, etc.)
-- Modules I2C (MPU6050 ou LCD selon les tests)
+-2× ATmega328P 
+-2× Quartz 
+-4× Condensateurs 22 pF 
+-1× MPU6050
+-1× Écran LCD 16x2 avec interface I2C 
+-2× Boutons poussoirs
+-2× Résistances 10 kΩ 
+-Fils de connexion (Dupont)
+-Breadboard
 
 ####  Fonctionnement :
-- L’ATmega est programmé avec le même code que celui utilisé sur Arduino.
-- Il communique directement avec l’autre Arduino ou avec un autre ATmega via I2C.
-- L’objectif est de tester le comportement du microcontrôleur **sans carte de développement**.
+-L’ATmega328P est programmé avec le même code que celui utilisé sur une carte Arduino, à l’aide d’un programmateur externe (comme USBasp ou Arduino as ISP).  
+-Les deux ATmega328P communiquent via le protocole I2C :
+    -L’un joue le rôle de maître (ex. : collecte les données du MPU6050).  
+    -L’autre joue le rôle d’esclave (ex. : affiche les données sur un écran LCD I2C).  
+-Les microcontrôleurs sont utilisés en mode "standalone" (hors carte de développement) :
+-Connectés sur breadboard avec :
+    -Un quartz et deux condensateurs 22 pF chacun pour générer l’horloge.
+    -Une alimentation 5V stable.
+    -Un bouton poussoir relié à la broche RESET de chaque ATmega.
+    -Une résistance de 10 kΩ connectée entre la broche RESET et VCC, pour garantir un redémarrage stable.
 
 ####  But de l'étape :
 - S’assurer que le microcontrôleur fonctionne correctement en **mode autonome**.
