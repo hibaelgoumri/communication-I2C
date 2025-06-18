@@ -31,7 +31,7 @@ Valider le **fonctionnement de la communication I2C** entre deux microcontrôleu
 - Vérifier la synchronisation et la fiabilité de la communication.
 - Observer une réponse simple à un signal I2C.
 #### le montage 
-![Voir le montage](![WhatsApp Image 2025-06-18 at 11 28 38 (1) (2)](https://github.com/user-attachments/assets/88f6527a-9f2b-40c0-a4ea-c1e3489a3cf6) 
+(![WhatsApp Image 2025-06-18 at 11 28 38 (1) (2)](https://github.com/user-attachments/assets/88f6527a-9f2b-40c0-a4ea-c1e3489a3cf6) 
 
 ---
 
