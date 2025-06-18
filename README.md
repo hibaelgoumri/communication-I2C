@@ -1,6 +1,7 @@
 # communication-I2C  
 
-## 📌 Objectif Général
+## Objectif Général
+
 Avant de réaliser directement le PCB de la boîte noire et de la station de contrôle, nous avons choisi de suivre une démarche progressive. L’objectif était de bien maîtriser la communication I2C et le fonctionnement du microcontrôleur ATmega328P.  
 Tester les fonctionnalités sur breadboard avec des composants simples (comme un bouton, une LED, un MPU6050 ou un LCD) permet plus de flexibilité et facilite le débogage. Contrairement au PCB, où les composants sont soudés, la breadboard permet des modifications rapides.  
 Cette approche nous a permis de valider chaque étape avant l'intégration finale sur le PCB, en réduisant les risques d’erreurs matérielles ou logicielles.
@@ -15,10 +16,10 @@ Cette approche nous a permis de valider chaque étape avant l'intégration final
 Valider le **fonctionnement de la communication I2C** entre deux microcontrôleurs en utilisant un exemple simple : un bouton poussoir et une LED.
 
 ####  Composants utilisés :
-- 2 cartes **Arduino UNO**
-- 1 bouton poussoir (sur le maître)
-- 1 LED (sur l’esclave)
-- Câblage SDA/SCL entre les deux cartes
+- 2 cartes **Arduino UNO** 
+- 1 bouton poussoir (sur le maître)  
+- 1 LED (sur l’esclave)  
+- Câblage SDA/SCL entre les deux cartes  
 
 ####  Fonctionnement :
 - L’Arduino **maître** lit l’état d’un bouton poussoir connecté en entrée.
@@ -29,7 +30,8 @@ Valider le **fonctionnement de la communication I2C** entre deux microcontrôleu
 - Apprendre à configurer le bus I2C (maître/esclave).
 - Vérifier la synchronisation et la fiabilité de la communication.
 - Observer une réponse simple à un signal I2C.
-
+#### le montage 
+![Voir le montage](![WhatsApp Image 2025-06-18 at 11 28 38 (1) (1)](https://github.com/user-attachments/assets/ac2112c8-8eea-49f6-866a-c76876433fe7)
 ---
 
 ###  Étape 2 : Remplacement par des modules réels (MPU6050 et LCD)
