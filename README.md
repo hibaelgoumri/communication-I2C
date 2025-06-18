@@ -69,27 +69,27 @@ la video
 Remplacer la carte Arduino par le **microcontrôleur brut** (ATmega328P), afin de simuler les conditions réelles d’un circuit imprimé.
 
 ####  Composants utilisés :
--2× ATmega328P 
--2× Quartz 
--4× Condensateurs 22 pF 
--1× MPU6050
--1× Écran LCD 16x2 avec interface I2C 
--2× Boutons poussoirs
--2× Résistances 10 kΩ 
--Fils de connexion (Dupont)
--Breadboard
+- 2× ATmega328P   
+- 2× Quartz   
+- 4× Condensateurs 22 pF   
+- 1× MPU6050  
+- 1× Écran LCD 16x2 avec interface I2C   
+- 2× Boutons poussoirs  
+- 2× Résistances 10 kΩ   
+- Fils de connexion (Dupont)  
+- Breadboard  
 
 ####  Fonctionnement :
--L’ATmega328P est programmé avec le même code que celui utilisé sur une carte Arduino, à l’aide d’un programmateur externe (comme USBasp ou Arduino as ISP).  
--Les deux ATmega328P communiquent via le protocole I2C :
-    -L’un joue le rôle de maître (ex. : collecte les données du MPU6050).  
-    -L’autre joue le rôle d’esclave (ex. : affiche les données sur un écran LCD I2C).  
--Les microcontrôleurs sont utilisés en mode "standalone" (hors carte de développement) :
--Connectés sur breadboard avec :
-    -Un quartz et deux condensateurs 22 pF chacun pour générer l’horloge.
-    -Une alimentation 5V stable.
-    -Un bouton poussoir relié à la broche RESET de chaque ATmega.
-    -Une résistance de 10 kΩ connectée entre la broche RESET et VCC, pour garantir un redémarrage stable.
+- L’ATmega328P est programmé avec le même code que celui utilisé sur une carte Arduino, à l’aide d’un programmateur externe (comme USBasp ou Arduino as ISP).  
+- Les deux ATmega328P communiquent via le protocole I2C :
+    - L’un joue le rôle de maître (ex. : collecte les données du MPU6050).  
+    - L’autre joue le rôle d’esclave (ex. : affiche les données sur un écran LCD I2C).  
+- Les microcontrôleurs sont utilisés en mode "standalone" (hors carte de développement) :
+- Connectés sur breadboard avec :
+    - Un quartz et deux condensateurs 22 pF chacun pour générer l’horloge.
+    - Une alimentation 5V stable.
+    - Un bouton poussoir relié à la broche RESET de chaque ATmega.
+    - Une résistance de 10 kΩ connectée entre la broche RESET et VCC, pour garantir un redémarrage stable.
 
 ####  But de l'étape :
 - S’assurer que le microcontrôleur fonctionne correctement en **mode autonome**.
